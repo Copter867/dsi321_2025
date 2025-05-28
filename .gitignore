@@ -1,3 +1,10 @@
+config/auth/
+tmp/
+data/from_prefect/
+data/lakefs/
+src/backend/config/
+test/
+
 # Byte-compiled / optimized / DLL files
 __pycache__/
 *.py[cod]
