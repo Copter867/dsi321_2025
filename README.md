@@ -19,7 +19,7 @@
 
 <details>
 <summary>Click to expand</summary>
-
+.
 ├── config
 │ ├── docker
 │ │ ├── Dockerfile.cli # CLI Dockerfile
@@ -49,3 +49,36 @@
 ├── pyproject.toml # Poetry/Project config
 ├── requirements.txt # Required Python packages
 └── start.sh # Startup script
+
+</details>
+
+---
+
+## ⚙️ Project Setup
+
+1. **Create virtual environment**
+   ```bash
+   python -m venv .venv
+
+2. **Activate environment**
+   ```Windows
+    source .venv/Scripts/activate
+   ```macOS / Linux
+    source .venv/bin/activate
+3. **Activate environment**
+    bash start.sh
+    # or
+    ./start.sh
+
+## 🛠️ Running Prefect Flows
+**Start Prefect server**
+    docker compose --profile server up -d
+**Connect to CLI container**
+    docker compose run cli
+**Run initial scraping flow (Full Data)**
+    python src/backend/pipeline/initial_scrape_flow.py
+**Run incremental scraping (Every 15 mins)**
+    python src/backend/pipeline/incremental_scrape_flow.py
+
+## 🔍 View Prefect UI Dashboard
+    Open in browser: http://localhost:42000
