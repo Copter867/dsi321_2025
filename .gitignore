@@ -2,6 +2,7 @@ config/auth/
 tmp/
 data/from_prefect/
 data/lakefs/
+data/*/
 src/backend/config/
 test/
 
